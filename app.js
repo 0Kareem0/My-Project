@@ -4,6 +4,7 @@ const port = 3000
 
 const logger = require('./middleware/logger')
 const peopleRoutes = require('./routes/peopleRoutes')
+const authRoutes = require('./routes/auth')
 
 // Middleware
 app.disable('etag')
@@ -15,15 +16,10 @@ app.use(express.json())
 
 // Routes
 app.use('/api/people', peopleRoutes)
+app.use('/login', authRoutes)
 
-app.post('/login', (req, res) => {
-  const { name } = req.body
-  if (name) {
-    return res.status(200).send(`Welcome ${name}`)
-  }
-  res.status(401).send({ success: false, msg: 'Enter anything u dumb fuck' })
-})
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}...`)
 })
+ 

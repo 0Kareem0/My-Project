@@ -17,9 +17,10 @@ app.use(express.json())
 // Routes
 app.use('/api/people', peopleRoutes)
 app.use('/login', authRoutes)
+console.log('finished express and now im gonna learn mongodb');
+
 
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}...`)
 })
- 

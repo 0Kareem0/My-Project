@@ -7,11 +7,11 @@ const peopleRoutes = require('./routes/peopleRoutes')
 const authRoutes = require('./routes/auth')
 
 // Middleware
+app.use(express.urlencoded({ extended: false }))
 app.disable('etag')
 app.disable('x-powered-by')
 app.use(logger)
 app.use(express.static('./methods-public'))
-app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 // Routes

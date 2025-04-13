@@ -1,4 +1,4 @@
-let { people } = require('../data/people')
+let { people } = require('../../data/people')
 
 // GET all people
 const getPeople = (req, res) => {

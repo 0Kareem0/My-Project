@@ -17,7 +17,6 @@ app.use(express.json())
 // Routes
 app.use('/api/people', peopleRoutes)
 app.use('/login', authRoutes)
-console.log('finished express and now im gonna learn mongodb3');
 
 
 

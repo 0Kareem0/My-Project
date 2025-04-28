@@ -13,6 +13,7 @@ app.disable('x-powered-by')
 app.use(logger)
 app.use(express.static('./methods-public'))
 app.use(express.json())
+console.log('im still here');
 
 // Routes
 app.use('/api/people', peopleRoutes)
